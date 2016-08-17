@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="10dp">
+
+    <!-- リポジトリ名 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/repository_name"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"/>
+    
+    <!-- リポジトリの説明 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/repository_description"
+        android:textSize="18sp"/>
+    
+    <!-- リポジトリの URL -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/repository_url"
+        android:textSize="12sp"/>
+</LinearLayout>

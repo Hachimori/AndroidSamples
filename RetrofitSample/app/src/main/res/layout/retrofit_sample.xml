@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!-- GitHub アカウント名 -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/github_account_name"
+        android:hint="GitHub アカウント名を入力"/>
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <!-- GitHub ユーザの情報を取得 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get user info"
+            android:id="@+id/get_user_info"/>
+        
+        <!-- GitHub ユーザのリポジトリ一覧を取得 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get repository"
+            android:id="@+id/get_repository"/>
+    </LinearLayout>
+    
+    <!-- GitHub ユーザのリポジトリ/コミット一覧 (@id/user_info が表示中の場合はこれは非表示にする) -->
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/repos_commit_list"
+        android:visibility="gone"/>
+    
+    <!-- GitHub ユーザ情報 (@id/repos_commit_list が表示中の場合はこれは非表示にする)-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:id="@+id/user_info"
+        android:visibility="gone"/>
+</LinearLayout>
